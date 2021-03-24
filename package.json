@@ -1,0 +1,41 @@
+{
+  "name": "blogr-landing-page",
+  "version": "1.0.0",
+  "description": "Blogr landing page FrontendMentor.io challenge",
+  "main": "./src/index.js",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.4",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.3.9",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.27.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --config webpack.dev.js --open",
+    "startc": "webpack serve --config webpack.dev.js --open chrome.exe"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srikant-n/fm-blogr-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srikant-n/fm-blogr-landing-page/issues"
+  },
+  "homepage": "https://github.com/srikant-n/fm-blogr-landing-page#readme"
+}
