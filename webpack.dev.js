@@ -13,6 +13,13 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", { loader: "css-loader", options: { sourceMap: true } }],
       },
+      {
+        test: /\.svg/,
+        use: {
+          loader: "svg-url-loader",
+          options: {},
+        }
+      }
     ],
   },
   plugins: [
