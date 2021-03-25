@@ -11,11 +11,8 @@ module.exports = {
       { test: /\.js$|\.jsx$/, exclude: /node_modules/, loader: "babel-loader" }, // Babel for JSX
       { test: /.css$/, use: [MiniCssExtractPlugin.loader, "css-loader"] }, // CSS
       {
-        test: /\.svg/,
-        use: {
-          loader: "svg-url-loader",
-          options: {},
-        },
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
       }
     ],
   },

@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const GradientDivRed = styled.div`
-background: hsl(13, 100%, 72%);
-background: linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
-`;
-
 /**
  * Default button, used for login and as base for other buttons
  */

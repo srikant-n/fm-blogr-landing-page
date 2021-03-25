@@ -14,11 +14,8 @@ module.exports = {
         use: ["style-loader", { loader: "css-loader", options: { sourceMap: true } }],
       },
       {
-        test: /\.svg/,
-        use: {
-          loader: "svg-url-loader",
-          options: {},
-        }
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
       }
     ],
   },
