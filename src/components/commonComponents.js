@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Padding = styled.div`
+padding: 55px 6%;
+`;
+
 /**
  * Default button, used for login and as base for other buttons
  */
