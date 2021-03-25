@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const Padding = styled.div`
-padding: 55px 6%;
+padding-left: 6%;
+padding-right: 6%;
+box-sizing: border-box;
 `;
+
+export const HORIZONTAL_PADDING = 6;
 
 /**
  * Default button, used for login and as base for other buttons
