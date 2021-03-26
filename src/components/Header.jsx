@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { ReactComponent as Logo } from "../../images/logo.svg";
 import hamburgerUrl from "../../images/icon-hamburger.svg";
+import closeUrl from "../../images/icon-close.svg";
+import MenuMobile from "./MenuMobile.jsx";
 
 /**
  * Header components with flex
@@ -24,7 +26,7 @@ const LogoHolder = styled.div`
 const MenuButton = styled.button`
   width: 35px;
   height: 35px;
-  background: url(${hamburgerUrl}) no-repeat center;
+  background: url(${props => props.showMenu ? closeUrl : hamburgerUrl}) no-repeat center;
   background-size: 100%;
   outline: none;
   border: none;
@@ -35,14 +37,27 @@ const MenuButton = styled.button`
  * Contains logo and menu.
  */
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {showMenu:false};
+    this.onClickMenu = this.onClickMenu.bind(this);
+  }
+
+  onClickMenu() {
+    this.setState(state => ({showMenu: !state.showMenu}));
+  }
+
   render() {
     return (
-      <StyledHeader>
-        <LogoHolder>
-          <Logo />
-        </LogoHolder>
-        <MenuButton />
-      </StyledHeader>
+      <div>
+        <StyledHeader>
+          <LogoHolder>
+            <Logo />
+          </LogoHolder>
+          <MenuButton showMenu={this.state.showMenu} onClick={this.onClickMenu} />
+        </StyledHeader>
+        {this.state.showMenu && <MenuMobile />}
+      </div>
     );
   }
 }

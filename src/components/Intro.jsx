@@ -54,7 +54,6 @@ class Intro extends React.Component {
     return (
       <Background>
         <Header />
-        <MenuMobile />
       </Background>
     );
   }
