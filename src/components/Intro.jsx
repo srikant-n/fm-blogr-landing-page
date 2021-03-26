@@ -1,20 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Button, Padding } from "./commonComponents";
+import { Button, Padding, ButtonFilled } from "./commonComponents";
 import bgUrl from "../../images/bg-pattern-intro.svg";
+import HeaderMobile from "./HeaderMobile.jsx";
 import Header from "./Header.jsx";
-
-/**
- * Filled button based on Button
- */
-const StartButton = styled(Button).attrs(() => ({ value: "Start for Free" }))`
-  background-color: white;
-  color: hsl(356, 100%, 66%);
-  :hover {
-    background-color: hsl(355, 100%, 74%);
-    color: white;
-  }
-`;
 
 /**
  * Outline button based on Button
@@ -41,6 +30,7 @@ const Background = styled(Padding)`
   padding-top: 55px;
 
   @media (min-width: 700px) {
+    padding-top: 60px;
     background: url(${bgUrl}) -440px -1350px no-repeat,
       linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
   }
@@ -65,6 +55,11 @@ const Content = styled.div`
 const Heading = styled.h1`
   color: white;
   font-size: 2.1em;
+  margin-bottom: 0;
+  
+  @media (min-width: 700px) {
+    font-size: 3.75em;
+  }
 `;
 
 /**
@@ -73,6 +68,11 @@ const Heading = styled.h1`
 const Paragraph = styled.p`
   color: white;
   font-size: 1.1em;
+  margin-bottom: 50px;
+
+  @media (min-width: 700px) {
+    font-size: 1.25em;
+  }
 `;
 
 /**
@@ -95,11 +95,12 @@ class Intro extends React.Component {
     return (
       <Background>
         <Header />
+        <HeaderMobile />
         <Content>
           <Heading>A modern publishing platform</Heading>
           <Paragraph>Grow your audience and build your online brand</Paragraph>
           <Buttons>
-            <StartButton />
+            <ButtonFilled value="Start for Free" />
             <LearnMoreButton />
           </Buttons>
         </Content>

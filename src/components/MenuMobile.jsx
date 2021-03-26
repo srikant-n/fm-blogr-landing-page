@@ -30,10 +30,10 @@ const MenuItem = styled.div`
  * Menu name
  */
 const MenuTitle = styled.h3`
-position: relative;
+  position: relative;
   margin: auto;
   padding: 7px 7px 7px 7px;
-  
+
   color: hsl(207, 13%, 34%);
   font-family: "Ubuntu", sans-serif;
   display: flex;
@@ -51,7 +51,7 @@ position: relative;
  * Arrow next to menu to display expanded state
  */
 const MenuArrow = styled.div`
-position: absolute;
+  position: absolute;
   right: -20px;
   width: 30px;
   height: 10px;
@@ -76,6 +76,7 @@ const SubMenu = styled.div`
   opacity: 0;
   line-height: 0;
   transition: ease 0.5s;
+  z-index: 10;
 
   ${MenuItem}[aria-expanded=true] + & {
     display: block;
@@ -107,9 +108,10 @@ const SubMenuItem = styled.p`
     margin: 4px;
     padding: 8px;
     line-height: 1;
+
     &:hover {
       cursor: pointer;
-  }
+    }
   }
 `;
 
@@ -124,8 +126,8 @@ const Line = styled.hr`
 /**
  * Login button
  */
-const LoginButton = styled(Button).attrs(() => ({value:"Login"}))`
-margin: 5px;
+const LoginButton = styled(Button).attrs(() => ({ value: "Login" }))`
+  margin: 5px;
   color: hsl(207, 13%, 34%);
   &:hover {
     color: hsl(207, 23%, 55%);
@@ -135,13 +137,13 @@ margin: 5px;
 /**
  * Filled button based on Button
  */
- const SignupButton = styled(Button).attrs(() => ({value:"Signup"}))`
- margin: 5px;
- background: linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
- color: white;
- :hover {
-  color: hsl(356, 100%, 66%);
- }
+const SignupButton = styled(Button).attrs(() => ({ value: "Signup" }))`
+  margin: 5px;
+  background: linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
+  color: white;
+  :hover {
+    color: hsl(356, 100%, 66%);
+  }
 `;
 
 /**
@@ -161,7 +163,6 @@ class MenuMobile extends React.Component {
    * @param {String} name menu item name
    */
   onClickMenuItem(name) {
-    console.log(this.state);
     this.setState((state) => ({ selected: name === state.selected ? "" : name }));
   }
 
@@ -174,12 +175,12 @@ class MenuMobile extends React.Component {
           </MenuTitle>
         </MenuItem>
         <SubMenu show={this.state.selected === "product"}>
-            <SubMenuItem>Overview</SubMenuItem>
-            <SubMenuItem>Pricing</SubMenuItem>
-            <SubMenuItem>Marketplace</SubMenuItem>
-            <SubMenuItem>Features</SubMenuItem>
-            <SubMenuItem>Integrations</SubMenuItem>
-          </SubMenu>
+          <SubMenuItem>Overview</SubMenuItem>
+          <SubMenuItem>Pricing</SubMenuItem>
+          <SubMenuItem>Marketplace</SubMenuItem>
+          <SubMenuItem>Features</SubMenuItem>
+          <SubMenuItem>Integrations</SubMenuItem>
+        </SubMenu>
         <MenuItem>
           <MenuTitle aria-expanded={this.state.selected === "company"} onClick={() => this.onClickMenuItem("company")}>
             Company <MenuArrow />
