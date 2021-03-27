@@ -19,6 +19,10 @@ export const Padding = styled.div`
  */
 export const Space = styled.div`
   height: ${props => props.height};
+
+  @media (min-width: 700px) {
+    height: ${props => props.desktop}
+  }
 `;
 
 /**
@@ -65,6 +69,11 @@ export const Heading = styled.h2`
   line-height: 1.2em;
   margin: 15px 20px;
   color: red;
+
+  @media (min-width: 700px) {
+    text-align: left;
+    margin: 15px 0;
+  }
 `;
 
 /**
@@ -77,4 +86,10 @@ export const Paragraph = styled.p`
   margin: 6px 20px;
   color: red;
   line-height: 1.75em;
+
+  @media (min-width: 700px) {
+    text-align: left;
+    margin: 24px 0;
+    word-spacing: 0.25em;
+  }
 `;
