@@ -111,13 +111,14 @@ const SubMenu = styled.div`
 /**
  * Each item in the submenu
  */
-const SubMenuItem = styled.p`
+const SubMenuItem = styled.a`
   text-transform: capitalize;
   margin: 0;
   padding: 0;
   font-weight: 400;
   color: hsl(207, 13%, 34%);
   transition: margin ease 0.5s, padding ease 0.5s;
+  text-decoration: none;
 
   &:hover {
     cursor: default;
@@ -167,11 +168,11 @@ class Header extends React.Component {
               Product
             </MenuTitle>
             <SubMenu>
-              <SubMenuItem>Overview</SubMenuItem>
-              <SubMenuItem>Pricing</SubMenuItem>
-              <SubMenuItem>Marketplace</SubMenuItem>
-              <SubMenuItem>Features</SubMenuItem>
-              <SubMenuItem>Integrations</SubMenuItem>
+              <SubMenuItem href="#overview">Overview</SubMenuItem>
+              <SubMenuItem href="#pricing">Pricing</SubMenuItem>
+              <SubMenuItem href="#">Marketplace</SubMenuItem>
+              <SubMenuItem href="#features">Features</SubMenuItem>
+              <SubMenuItem href="#integrations">Integrations</SubMenuItem>
             </SubMenu>
           </MenuItem>
           <MenuItem>
@@ -182,10 +183,10 @@ class Header extends React.Component {
               Company
             </MenuTitle>
             <SubMenu>
-              <SubMenuItem>About</SubMenuItem>
-              <SubMenuItem>Team</SubMenuItem>
-              <SubMenuItem>Blog</SubMenuItem>
-              <SubMenuItem>Careers</SubMenuItem>
+              <SubMenuItem href="#">About</SubMenuItem>
+              <SubMenuItem href="#">Team</SubMenuItem>
+              <SubMenuItem href="#">Blog</SubMenuItem>
+              <SubMenuItem href="#">Careers</SubMenuItem>
             </SubMenu>
           </MenuItem>
           <MenuItem>
@@ -196,9 +197,9 @@ class Header extends React.Component {
               Connect
             </MenuTitle>
             <SubMenu>
-              <SubMenuItem>Contact</SubMenuItem>
-              <SubMenuItem>Newsletter</SubMenuItem>
-              <SubMenuItem>LinkedIn</SubMenuItem>
+              <SubMenuItem href="#">Contact</SubMenuItem>
+              <SubMenuItem href="#">Newsletter</SubMenuItem>
+              <SubMenuItem href="#">LinkedIn</SubMenuItem>
             </SubMenu>
           </MenuItem>
           <Buttons>

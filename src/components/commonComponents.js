@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+/**
+ * Left and right padding
+ */
 export const Padding = styled.div`
   padding-left: 6%;
   padding-right: 6%;
@@ -11,6 +14,16 @@ export const Padding = styled.div`
   }
 `;
 
+/**
+ * Vertical empty space
+ */
+export const Space = styled.div`
+  height: ${props => props.height};
+`;
+
+/**
+ * Borderless transparent button
+ */
 export const Button = styled.input.attrs((props) => ({
   type: "button",
   value: props.value,
@@ -30,6 +43,9 @@ export const Button = styled.input.attrs((props) => ({
   }
 `;
 
+/**
+ * Filled white button
+ */
 export const ButtonFilled = styled(Button)`
   background-color: white;
   color: hsl(356, 100%, 66%);
@@ -39,11 +55,26 @@ export const ButtonFilled = styled(Button)`
   }
 `;
 
+/**
+ * Heading for content
+ */
 export const Heading = styled.h2`
   color: hsl(208, 49%, 24%);
+  text-align: center;
+  font-size: 1.7em;
+  line-height: 1.2em;
+  margin: 15px 20px;
+  color: red;
 `;
 
+/**
+ * Content
+ */
 export const Paragraph = styled.p`
   color: hsl(207, 13%, 34%);
+  text-align: center;
   font-size: 16px;
+  margin: 6px 20px;
+  color: red;
+  line-height: 1.75em;
 `;
