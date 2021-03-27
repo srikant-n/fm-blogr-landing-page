@@ -17,6 +17,7 @@ const Background = styled(Padding)`
 const MainHeading = styled(Heading)`
   text-align: center;
   margin-top: 58px;
+  
   @media (min-width: 700px) {
     margin: 110px 0;
     font-size: 2.35em;
@@ -79,7 +80,7 @@ class Features extends React.Component {
             and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the
             looks of a blog.
           </Paragraph>
-          <Space height="20px" desktop="35px" />
+          <Space height="25px" desktop="35px" />
           <Heading>Robust content management</Heading>
           <Paragraph>
             Flexible content management enables users to easily move through posts. Increase the usability of your blog

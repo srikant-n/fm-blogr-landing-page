@@ -68,7 +68,6 @@ export const Heading = styled.h2`
   font-size: 1.7em;
   line-height: 1.2em;
   margin: 15px 20px;
-  color: red;
 
   @media (min-width: 700px) {
     text-align: left;
@@ -84,7 +83,6 @@ export const Paragraph = styled.p`
   text-align: center;
   font-size: 16px;
   margin: 6px 20px;
-  color: red;
   line-height: 1.75em;
 
   @media (min-width: 700px) {
