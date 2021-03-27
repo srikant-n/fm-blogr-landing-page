@@ -169,7 +169,7 @@ class Header extends React.Component {
             </MenuTitle>
             <SubMenu>
               <SubMenuItem href="#overview">Overview</SubMenuItem>
-              <SubMenuItem href="#pricing">Pricing</SubMenuItem>
+              <SubMenuItem href="#">Pricing</SubMenuItem>
               <SubMenuItem href="#">Marketplace</SubMenuItem>
               <SubMenuItem href="#features">Features</SubMenuItem>
               <SubMenuItem href="#integrations">Integrations</SubMenuItem>

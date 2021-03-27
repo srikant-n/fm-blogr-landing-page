@@ -17,7 +17,7 @@ const Background = styled(Padding)`
 const MainHeading = styled(Heading)`
   text-align: center;
   margin-top: 58px;
-  
+
   @media (min-width: 700px) {
     margin: 110px 0;
     font-size: 2.35em;

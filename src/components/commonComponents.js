@@ -18,10 +18,10 @@ export const Padding = styled.div`
  * Vertical empty space
  */
 export const Space = styled.div`
-  height: ${props => props.height};
+  height: ${(props) => props.height};
 
   @media (min-width: 700px) {
-    height: ${props => props.desktop}
+    height: ${(props) => props.desktop};
   }
 `;
 
@@ -82,7 +82,7 @@ export const Paragraph = styled.p`
   color: hsl(207, 13%, 34%);
   text-align: center;
   font-size: 16px;
-  margin: 6px 20px;
+  margin: 10px 20px 4px 20px;
   line-height: 1.75em;
 
   @media (min-width: 700px) {

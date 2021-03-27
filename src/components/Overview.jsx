@@ -104,7 +104,7 @@ class Overview extends React.Component {
           </Content>
         </Padding>
 
-        <Space height="150px" />
+        <Space height="180px" />
       </div>
     );
   }
