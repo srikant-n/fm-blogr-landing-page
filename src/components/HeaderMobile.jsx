@@ -44,6 +44,7 @@ const MenuButton = styled.button`
   background-size: 100%;
   outline: none;
   border: none;
+  cursor: pointer;
 `;
 
 /**

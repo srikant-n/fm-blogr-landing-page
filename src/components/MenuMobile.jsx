@@ -3,8 +3,14 @@ import styled from "styled-components";
 import arrowUrl from "../../images/icon-arrow-dark.svg";
 import hamburgerUrl from "../../images/icon-hamburger.svg";
 import { Button } from "./commonComponents";
+import { MenuTitle, ProductSubMenu, CompanySubMenu, ConnectSubMenu, SubMenuBackground } from "./SubMenus.jsx";
+
+const Container = styled.div`
+  position: relative;
+`;
 
 const Background = styled.div`
+  position: absolute;
   width: 100%;
   margin-top: 35px;
   background-color: white;
@@ -15,104 +21,43 @@ const Background = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 22px;
+  z-index: 2;
 `;
 
 /**
  * Menu title and submenu holder
  */
 const MenuItem = styled.div`
-  padding: 5px;
-  /* width: 100%; */
+  padding: 10px;
+  margin: 4px 0;
+  width: 100%;
   text-align: center;
 `;
 
-/**
- * Menu name
- */
-const MenuTitle = styled.h3`
-  position: relative;
-  margin: auto;
-  padding: 7px 7px 7px 7px;
-
+const MenuTitleMobile = styled(MenuTitle)`
+position: relative;
   color: hsl(207, 13%, 34%);
-  font-family: "Ubuntu", sans-serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  &:hover {
-    color: hsl(207, 23%, 55%);
-    cursor: pointer;
-  }
-`;
-
-/**
- * Arrow next to menu to display expanded state
- */
-const MenuArrow = styled.div`
-  position: absolute;
-  right: -20px;
-  width: 30px;
-  height: 10px;
-  background: url(${arrowUrl}) no-repeat center;
-
-  ${MenuItem}[aria-expanded=true] & {
-    transform: rotate(180deg);
-  }
-`;
-
-/**
- * Buttons inside the menu category
- */
-const SubMenu = styled.div`
-  width: 100%;
   margin: 0;
   padding: 0;
+  font-size: 18px;
+
+  &::after {
+    content: url(${arrowUrl});
+  }
+
+  &[aria-expanded="true"]::after {
+    top: 5px;
+  }
+`;
+
+const SubMenuMobile = styled(SubMenuBackground)`
+  position: relative;
+  width: 100%;
   text-align: center;
   box-sizing: border-box;
   background-color: hsl(240, 2%, 95%);
-  border-radius: 5px;
-  opacity: 0;
-  line-height: 0;
-  transition: ease 0.5s;
-  z-index: 10;
-
-  ${MenuItem}[aria-expanded=true] + & {
-    display: block;
-    position: relative;
-    opacity: 1;
-    line-height: 1;
-    margin: 25px 0;
-    padding: 15px;
-  }
-`;
-
-/**
- * Each item in the submenu
- */
-const SubMenuItem = styled.p`
-  text-transform: capitalize;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  color: hsl(207, 13%, 34%);
-  transition: ease 0.5s;
-
-  &:hover {
-    color: hsl(207, 23%, 55%);
-    cursor: default;
-  }
-
-  ${MenuItem}[aria-expanded=true] + ${SubMenu} > & {
-    margin: 4px;
-    padding: 8px;
-    line-height: 1;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
+  margin: ${(props) => (props.show ? "25px 0" : 0)};
+  padding: ${(props) => (props.show ? "15px" : 0)};
 `;
 
 /**
@@ -168,44 +113,46 @@ class MenuMobile extends React.Component {
 
   render() {
     return (
-      <Background>
-        <MenuItem aria-expanded={this.state.selected === "product"} onClick={() => this.onClickMenuItem("product")}>
-          <MenuTitle>
-            Product <MenuArrow />
-          </MenuTitle>
-        </MenuItem>
-        <SubMenu show={this.state.selected === "product"}>
-          <SubMenuItem>Overview</SubMenuItem>
-          <SubMenuItem>Pricing</SubMenuItem>
-          <SubMenuItem>Marketplace</SubMenuItem>
-          <SubMenuItem>Features</SubMenuItem>
-          <SubMenuItem>Integrations</SubMenuItem>
-        </SubMenu>
-        <MenuItem>
-          <MenuTitle aria-expanded={this.state.selected === "company"} onClick={() => this.onClickMenuItem("company")}>
-            Company <MenuArrow />
-          </MenuTitle>
-          <SubMenu show={this.state.selected === "company"}>
-            <SubMenuItem>About</SubMenuItem>
-            <SubMenuItem>Team</SubMenuItem>
-            <SubMenuItem>Blog</SubMenuItem>
-            <SubMenuItem>Careers</SubMenuItem>
-          </SubMenu>
-        </MenuItem>
-        <MenuItem>
-          <MenuTitle aria-expanded={this.state.selected === "connect"} onClick={() => this.onClickMenuItem("connect")}>
-            Connect <MenuArrow />
-          </MenuTitle>
-          <SubMenu show={this.state.selected === "connect"}>
-            <SubMenuItem>Contact</SubMenuItem>
-            <SubMenuItem>Newsletter</SubMenuItem>
-            <SubMenuItem>LinkedIn</SubMenuItem>
-          </SubMenu>
-        </MenuItem>
-        <Line />
-        <LoginButton />
-        <SignupButton />
-      </Background>
+      <Container>
+        <Background>
+          <MenuItem>
+            <MenuTitleMobile
+              aria-expanded={this.state.selected === "product"}
+              onClick={() => this.onClickMenuItem("product")}
+            >
+              Product
+            </MenuTitleMobile>
+            <SubMenuMobile show={this.state.selected === "product"}>
+              <ProductSubMenu show={this.state.selected === "product"} />
+            </SubMenuMobile>
+          </MenuItem>
+          <MenuItem>
+            <MenuTitleMobile
+              aria-expanded={this.state.selected === "company"}
+              onClick={() => this.onClickMenuItem("company")}
+            >
+              Company
+            </MenuTitleMobile>
+            <SubMenuMobile show={this.state.selected === "company"}>
+              <CompanySubMenu show={this.state.selected === "company"} />
+            </SubMenuMobile>
+          </MenuItem>
+          <MenuItem>
+            <MenuTitleMobile
+              aria-expanded={this.state.selected === "connect"}
+              onClick={() => this.onClickMenuItem("connect")}
+            >
+              Connect
+            </MenuTitleMobile>
+            <SubMenuMobile show={this.state.selected === "connect"}>
+              <ConnectSubMenu show={this.state.selected === "connect"} />
+            </SubMenuMobile>
+          </MenuItem>
+          <Line />
+          <LoginButton />
+          <SignupButton />
+        </Background>
+      </Container>
     );
   }
 }
