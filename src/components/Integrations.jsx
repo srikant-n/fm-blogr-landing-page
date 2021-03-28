@@ -5,7 +5,7 @@ import laptopMobile from "../../images/illustration-laptop-mobile.svg";
 import laptopDesktop from "../../images/illustration-laptop-desktop.svg";
 
 const Container = styled.div`
-  height: 1025px;
+  margin: 30px 0;
   @media (min-width: 900px) {
     height: 870px;
   }
@@ -30,7 +30,7 @@ const IllustrationMobile = styled.img.attrs(() => ({ src: laptopMobile }))`
  */
 const IllustrationDesktop = styled.img.attrs(() => ({ src: laptopDesktop }))`
   position: absolute;
-  left: -280px;
+  right: 50%;
   display: none;
 
   @media (min-width: 900px) {
