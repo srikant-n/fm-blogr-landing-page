@@ -15,8 +15,14 @@ const MenuTitleFooter = styled(MenuTitle)`
   padding: 0 7px;
   font-size: 18px;
   text-align: center;
+
   &::after {
     content: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+    cursor: default;
   }
 `;
 
@@ -25,7 +31,7 @@ const MenuTitleFooter = styled(MenuTitle)`
  */
 const SubMenuFooter = styled(SubMenuBackground)`
   position: relative;
-  width: 150px;
+  width: 100%;
   text-align: center;
   box-sizing: border-box;
   background-color: transparent;
@@ -33,6 +39,7 @@ const SubMenuFooter = styled(SubMenuBackground)`
   padding: 8px;
 
   @media (min-width: 700px) {
+    width: 150px;
     text-align: left;
     padding: 0 0 20px 0;
   }
@@ -78,7 +85,7 @@ const Logo = styled.img.attrs(() => ({ src: logo }))`
   margin: 75px 0;
 
   @media (min-width: 700px) {
-    margin: 0;
+    margin: 0 50px 0 0;
   }
 `;
 

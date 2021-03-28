@@ -35,7 +35,7 @@ const MenuItem = styled.div`
 `;
 
 const MenuTitleMobile = styled(MenuTitle)`
-position: relative;
+  position: relative;
   color: hsl(207, 13%, 34%);
   margin: 0;
   padding: 0;

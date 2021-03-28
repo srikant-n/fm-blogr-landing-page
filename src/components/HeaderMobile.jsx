@@ -12,7 +12,7 @@ const Container = styled.div`
   display: block;
 
   @media (min-width: 700px) {
-    display:none;
+    display: none;
   }
 `;
 

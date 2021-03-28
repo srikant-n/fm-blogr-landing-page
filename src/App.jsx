@@ -8,6 +8,8 @@ import Integrations from "./components/Integrations.jsx";
 
 const StyledApp = styled.div`
   font-family: "Overpass", sans-serif;
+  /* max-width: 1800px; */
+  margin: auto;
 `;
 
 class App extends React.Component {

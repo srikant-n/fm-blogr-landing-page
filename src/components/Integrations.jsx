@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Padding, Heading, Pragraph, Space, Paragraph } from "./commonComponents";
+import { Padding, Heading, Space, Paragraph } from "./commonComponents";
 import laptopMobile from "../../images/illustration-laptop-mobile.svg";
 import laptopDesktop from "../../images/illustration-laptop-desktop.svg";
+
+const Container = styled.div`
+  height: 1025px;
+  @media (min-width: 700px) {
+    height: 870px;
+  }
+`;
 
 /**
  * Laptop illustration on Mobile
@@ -28,6 +35,7 @@ const IllustrationDesktop = styled.img.attrs(() => ({ src: laptopDesktop }))`
 
   @media (min-width: 700px) {
     display: block;
+    top: 0;
   }
 `;
 
@@ -44,7 +52,7 @@ const Content = styled.div`
 class Integrations extends React.Component {
   render() {
     return (
-      <div id="integrations">
+      <Container id="integrations">
         <Padding>
           <IllustrationMobile />
           <IllustrationDesktop />
@@ -64,8 +72,7 @@ class Integrations extends React.Component {
             </Paragraph>
           </Content>
         </Padding>
-        <Space height="85px" desktop="250px" />
-      </div>
+      </Container>
     );
   }
 }

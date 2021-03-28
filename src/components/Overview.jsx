@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading, Padding, Paragraph, Space } from "./commonComponents";
+import { Heading, Padding, Paragraph } from "./commonComponents";
 import phones from "../../images/illustration-phones.svg";
 import bgPattern from "../../images/bg-pattern-circles.svg";
+
+const Container = styled.div`
+  height: 890px;
+  @media (min-width: 700px) {
+    height: 590px;
+  }
+`;
 
 /**
  * Background with colour and pattern
@@ -87,7 +94,7 @@ const ParagraphWhite = styled(Paragraph)`
 class Overview extends React.Component {
   render() {
     return (
-      <div id="overview">
+      <Container id="overview">
         <Backdrop>
           <BgPattern />
         </Backdrop>
@@ -103,9 +110,7 @@ class Overview extends React.Component {
             </ParagraphWhite>
           </Content>
         </Padding>
-
-        <Space height="180px" />
-      </div>
+      </Container>
     );
   }
 }

@@ -4,6 +4,7 @@ import styled from "styled-components";
  * Left and right padding
  */
 export const Padding = styled.div`
+  position: relative;
   padding-left: 6%;
   padding-right: 6%;
   box-sizing: border-box;
@@ -42,7 +43,7 @@ export const Button = styled.input.attrs((props) => ({
   font-weight: 600;
   font-size: 18px;
   :hover {
-    color: hsl(355, 100%, 74%);
+    text-decoration: underline;
     cursor: pointer;
   }
 `;

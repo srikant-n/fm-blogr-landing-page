@@ -8,7 +8,13 @@ import editorDesktop from "../../images/illustration-editor-desktop.svg";
  * Main div for padding
  */
 const Background = styled(Padding)`
+  position: relative;
   padding-top: 45px;
+  height: 1255px;
+
+  @media (min-width: 700px) {
+    height: 935px;
+  }
 `;
 
 /**
@@ -55,7 +61,8 @@ const EditorImageDesktop = styled.img.attrs(() => ({ src: editorDesktop }))`
   height: auto;
   display: none;
   right: -275px;
-  top: 67%;
+  /* top: 67%; */
+  top: 70px;
 
   @media (min-width: 700px) {
     display: block;
@@ -87,8 +94,6 @@ class Features extends React.Component {
             by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
           </Paragraph>
         </Content>
-
-        <Space height="60px" desktop="160px" />
       </Background>
     );
   }

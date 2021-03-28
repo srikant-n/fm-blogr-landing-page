@@ -5,7 +5,7 @@ import { Button, ButtonFilled } from "./commonComponents";
 import { CompanySubMenu, ConnectSubMenu, MenuTitle, ProductSubMenu, SubMenuBackground } from "./SubMenus.jsx";
 
 /**
- * Container for disabling on mobile  
+ * Container for disabling on mobile
  */
 const Container = styled.div`
   display: none;
@@ -54,7 +54,6 @@ const MenuItem = styled.div`
   margin: 5px;
   font-family: "Ubuntu", sans-serif;
 `;
-
 
 /**
  * Header for the application when viewed on desktop.

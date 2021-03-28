@@ -14,7 +14,8 @@ const MenuTitle = styled.button`
   font-size: 16px;
   border: none;
   background-color: transparent;
-
+  outline: none;
+  
   &::after {
     position: absolute;
     display: inline-block;
@@ -54,7 +55,6 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-
 /**
  * Each item in the submenu
  */
@@ -63,7 +63,7 @@ const SubMenuItem = styled.a`
   margin: ${(props) => (props.show ? "4px" : 0)};
   padding: ${(props) => (props.show ? "7px" : 0)};
   font-weight: 400;
-  color: ${props => props.color ? props.color : "hsl(207, 13%, 34%)"};
+  color: ${(props) => (props.color ? props.color : "hsl(207, 13%, 34%)")};
   transition: margin ease 0.4s, padding ease 0.4s;
   text-decoration: none;
   text-align: center;
@@ -74,8 +74,8 @@ const SubMenuItem = styled.a`
   }
 
   @media (min-width: 700px) {
-      text-align: left;
-      margin: 0;
+    text-align: left;
+    margin: 0;
   }
 `;
 
