@@ -29,7 +29,7 @@ const Background = styled(Padding)`
   border-bottom-left-radius: 100px;
   padding-top: 55px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     padding-top: 60px;
     background: url(${bgUrl}) -440px -1350px no-repeat,
       linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
@@ -57,7 +57,7 @@ const Heading = styled.h1`
   font-size: 2.1em;
   margin-bottom: 0;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     font-size: 3.75em;
   }
 `;
@@ -70,7 +70,7 @@ const Paragraph = styled.p`
   font-size: 1.1em;
   margin-bottom: 50px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     font-size: 1.25em;
   }
 `;

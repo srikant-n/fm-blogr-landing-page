@@ -9,7 +9,7 @@ export const Padding = styled.div`
   padding-right: 6%;
   box-sizing: border-box;
 
-  @media (min-width: 700px) {
+  @media (min-width: 1000px) {
     padding-left: 11.5%;
     padding-right: 11.5%;
   }
@@ -21,7 +21,7 @@ export const Padding = styled.div`
 export const Space = styled.div`
   height: ${(props) => props.height};
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     height: ${(props) => props.desktop};
   }
 `;
@@ -70,7 +70,7 @@ export const Heading = styled.h2`
   line-height: 1.2em;
   margin: 15px 20px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     text-align: left;
     margin: 15px 0;
   }
@@ -86,7 +86,7 @@ export const Paragraph = styled.p`
   margin: 10px 20px 4px 20px;
   line-height: 1.75em;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     text-align: left;
     margin: 24px 0;
     word-spacing: 0.25em;

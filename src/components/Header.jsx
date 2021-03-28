@@ -10,7 +10,7 @@ import { CompanySubMenu, ConnectSubMenu, MenuTitle, ProductSubMenu, SubMenuBackg
 const Container = styled.div`
   display: none;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     display: block;
   }
 `;

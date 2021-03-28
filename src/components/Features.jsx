@@ -10,9 +10,8 @@ import editorDesktop from "../../images/illustration-editor-desktop.svg";
 const Background = styled(Padding)`
   position: relative;
   padding-top: 45px;
-  height: 1255px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     height: 935px;
   }
 `;
@@ -24,7 +23,7 @@ const MainHeading = styled(Heading)`
   text-align: center;
   margin-top: 58px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     margin: 110px 0;
     font-size: 2.35em;
   }
@@ -34,7 +33,7 @@ const MainHeading = styled(Heading)`
  * Content holder for different layout based on size
  */
 const Content = styled.div`
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     margin-right: 51%;
   }
 `;
@@ -44,10 +43,13 @@ const Content = styled.div`
  */
 const EditorImageMobile = styled.img.attrs(() => ({ src: editorMobile }))`
   width: 405px;
-  margin: 30px 0 30px -37px;
+  margin: 30px 0 30px 0;
   height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     display: none;
   }
 `;
@@ -60,11 +62,12 @@ const EditorImageDesktop = styled.img.attrs(() => ({ src: editorDesktop }))`
   width: auto;
   height: auto;
   display: none;
-  right: -275px;
+  /* right: -275px; */
+  left: 50%;
   /* top: 67%; */
   top: 70px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     display: block;
   }
 `;
@@ -94,6 +97,7 @@ class Features extends React.Component {
             by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
           </Paragraph>
         </Content>
+        <Space height="80px" desktop="0" />
       </Background>
     );
   }

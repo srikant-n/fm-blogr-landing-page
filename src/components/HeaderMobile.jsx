@@ -11,7 +11,7 @@ import MenuMobile from "./MenuMobile.jsx";
 const Container = styled.div`
   display: block;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     display: none;
   }
 `;

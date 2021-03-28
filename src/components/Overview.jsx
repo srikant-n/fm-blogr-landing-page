@@ -6,7 +6,7 @@ import bgPattern from "../../images/bg-pattern-circles.svg";
 
 const Container = styled.div`
   height: 890px;
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     height: 590px;
   }
 `;
@@ -25,7 +25,7 @@ const Backdrop = styled(Padding)`
   overflow: clip;
   z-index: -1;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     background: linear-gradient(90deg, hsl(237, 17%, 21%) 0%, hsl(237, 23%, 32%) 100%);
     height: 400px;
     margin-top: 75px;
@@ -43,7 +43,7 @@ const BgPattern = styled.img.attrs(() => ({ src: bgPattern }))`
   width: auto;
   height: 95%;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     height: 250%;
     left: 12%;
     top: -122%;
@@ -58,7 +58,7 @@ const Phones = styled.img.attrs(() => ({ src: phones }))`
   margin: 20px 0 0 -25px;
   height: 400px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     position: absolute;
     height: 580px;
     margin: 5px 0 0 -40px;
@@ -66,7 +66,7 @@ const Phones = styled.img.attrs(() => ({ src: phones }))`
 `;
 
 const Content = styled.div`
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     padding: 190px 0 0 51%;
   }
 `;

@@ -9,10 +9,16 @@ const Container = styled.div`
   position: relative;
 `;
 
+/**
+ * Background
+ */
 const Background = styled.div`
   position: absolute;
-  width: 100%;
+  width: 500px;
+  max-width: 100%;
   margin-top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: white;
   border-radius: 8px;
   box-shadow: -10px 10px 30px 10px rgba(0, 0, 0, 0.1), 10px 10px 20px 5px rgba(0, 0, 0, 0.1);

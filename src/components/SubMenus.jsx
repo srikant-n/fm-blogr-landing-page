@@ -15,7 +15,7 @@ const MenuTitle = styled.button`
   border: none;
   background-color: transparent;
   outline: none;
-  
+
   &::after {
     position: absolute;
     display: inline-block;
@@ -73,7 +73,7 @@ const SubMenuItem = styled.a`
     cursor: ${(props) => (props.show ? "pointer" : "default")};
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     text-align: left;
     margin: 0;
   }

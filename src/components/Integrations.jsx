@@ -6,7 +6,7 @@ import laptopDesktop from "../../images/illustration-laptop-desktop.svg";
 
 const Container = styled.div`
   height: 1025px;
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     height: 870px;
   }
 `;
@@ -20,7 +20,7 @@ const IllustrationMobile = styled.img.attrs(() => ({ src: laptopMobile }))`
   transform: translateX(-50%);
   margin-bottom: 18px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     display: none;
   }
 `;
@@ -33,7 +33,7 @@ const IllustrationDesktop = styled.img.attrs(() => ({ src: laptopDesktop }))`
   left: -280px;
   display: none;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     display: block;
     top: 0;
   }
@@ -43,7 +43,7 @@ const IllustrationDesktop = styled.img.attrs(() => ({ src: laptopDesktop }))`
  * Div for layouts
  */
 const Content = styled.div`
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     margin-left: 51%;
     padding-top: 185px;
   }

@@ -38,7 +38,7 @@ const SubMenuFooter = styled(SubMenuBackground)`
   margin: 15px 0;
   padding: 8px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     width: 150px;
     text-align: left;
     padding: 0 0 20px 0;
@@ -56,7 +56,7 @@ const Background = styled.div`
   height: 900px;
   text-align: center;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     margin-top: 40px;
     text-align: left;
     height: 350px;
@@ -66,7 +66,7 @@ const Background = styled.div`
 const MenuContainer = styled.div``;
 
 const PaddingFooter = styled(Padding)`
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -84,7 +84,7 @@ const Logo = styled.img.attrs(() => ({ src: logo }))`
   height: auto;
   margin: 75px 0;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     margin: 0 50px 0 0;
   }
 `;
