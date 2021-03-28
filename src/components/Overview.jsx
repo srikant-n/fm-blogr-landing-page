@@ -5,7 +5,7 @@ import phones from "../../images/illustration-phones.svg";
 import bgPattern from "../../images/bg-pattern-circles.svg";
 
 const Container = styled.div`
-  height: 890px;
+position:relative;
   @media (min-width: 900px) {
     height: 590px;
   }
@@ -15,20 +15,20 @@ const Container = styled.div`
  * Background with colour and pattern
  */
 const Backdrop = styled(Padding)`
-  position: absolute;
+  position: relative;
   background: linear-gradient(180deg, hsl(237, 17%, 21%) 0%, hsl(237, 23%, 32%) 100%);
   width: 100%;
-  height: 625px;
+  padding: 250px 0 110px 0;
   border-bottom-left-radius: 100px;
   border-top-right-radius: 100px;
   margin-top: 205px;
   overflow: clip;
-  z-index: -1;
 
   @media (min-width: 900px) {
     background: linear-gradient(90deg, hsl(237, 17%, 21%) 0%, hsl(237, 23%, 32%) 100%);
     height: 400px;
     margin-top: 75px;
+    padding: 10px 0;
   }
 `;
 
@@ -36,7 +36,7 @@ const Backdrop = styled(Padding)`
  * Pattern on the background
  */
 const BgPattern = styled.img.attrs(() => ({ src: bgPattern }))`
-  position: relative;
+  position: absolute;
   left: 50%;
   top: -36%;
   transform: translateX(-50%);
@@ -54,20 +54,28 @@ const BgPattern = styled.img.attrs(() => ({ src: bgPattern }))`
  * Illustration
  */
 const Phones = styled.img.attrs(() => ({ src: phones }))`
+  position: absolute;
   width: auto;
-  margin: 20px 0 0 -25px;
+  margin: 20px 0;
   height: 400px;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 
   @media (min-width: 900px) {
-    position: absolute;
     height: 580px;
-    margin: 5px 0 0 -40px;
+    top:-80px;
+    margin: 0;
+    right: 51%;
+    left: unset;
+    transform: unset;    
   }
 `;
 
 const Content = styled.div`
   @media (min-width: 900px) {
-    padding: 190px 0 0 51%;
+    padding: 60px 0 20px 51%;
   }
 `;
 
@@ -95,21 +103,20 @@ class Overview extends React.Component {
   render() {
     return (
       <Container id="overview">
+        <Phones />
         <Backdrop>
           <BgPattern />
+          <Padding>
+            <Content>
+              <MainHeading>State of the Art Infrastructure</MainHeading>
+              <ParagraphWhite>
+                With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+                connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your
+                site competitive.
+              </ParagraphWhite>
+            </Content>
+          </Padding>
         </Backdrop>
-
-        <Padding>
-          <Phones />
-          <Content>
-            <MainHeading>State of the Art Infrastructure</MainHeading>
-            <ParagraphWhite>
-              With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
-              connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your
-              site competitive.
-            </ParagraphWhite>
-          </Content>
-        </Padding>
       </Container>
     );
   }
