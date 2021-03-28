@@ -63,32 +63,38 @@ const SubMenuItem = styled.a`
   margin: ${(props) => (props.show ? "4px" : 0)};
   padding: ${(props) => (props.show ? "7px" : 0)};
   font-weight: 400;
-  color: hsl(207, 13%, 34%);
+  color: ${props => props.color ? props.color : "hsl(207, 13%, 34%)"};
   transition: margin ease 0.4s, padding ease 0.4s;
   text-decoration: none;
+  text-align: center;
 
   &:hover {
     font-weight: 600;
     cursor: ${(props) => (props.show ? "pointer" : "default")};
+  }
+
+  @media (min-width: 700px) {
+      text-align: left;
+      margin: 0;
   }
 `;
 
 function ProductSubMenu(props) {
   return (
     <Container>
-      <SubMenuItem href="#overview" show={props.show}>
+      <SubMenuItem href="#overview" show={props.show} color={props.color}>
         Overview
       </SubMenuItem>
-      <SubMenuItem href="#" show={props.show}>
+      <SubMenuItem href="#" show={props.show} color={props.color}>
         Pricing
       </SubMenuItem>
-      <SubMenuItem href="#" show={props.show}>
+      <SubMenuItem href="#" show={props.show} color={props.color}>
         Marketplace
       </SubMenuItem>
-      <SubMenuItem href="#features" show={props.show}>
+      <SubMenuItem href="#features" show={props.show} color={props.color}>
         Features
       </SubMenuItem>
-      <SubMenuItem href="#integrations" show={props.show}>
+      <SubMenuItem href="#integrations" show={props.show} color={props.color}>
         Integrations
       </SubMenuItem>
     </Container>
@@ -98,16 +104,16 @@ function ProductSubMenu(props) {
 function CompanySubMenu(props) {
   return (
     <Container>
-      <SubMenuItem href="#" show={props.show}>
+      <SubMenuItem href="#" show={props.show} color={props.color}>
         About
       </SubMenuItem>
-      <SubMenuItem href="#" show={props.show}>
+      <SubMenuItem href="#" show={props.show} color={props.color}>
         Team
       </SubMenuItem>
-      <SubMenuItem href="#" show={props.show}>
+      <SubMenuItem href="#" show={props.show} color={props.color}>
         Blog
       </SubMenuItem>
-      <SubMenuItem href="#" show={props.show}>
+      <SubMenuItem href="#" show={props.show} color={props.color}>
         Careers
       </SubMenuItem>
     </Container>
@@ -117,13 +123,13 @@ function CompanySubMenu(props) {
 function ConnectSubMenu(props) {
   return (
     <Container>
-      <SubMenuItem href="#" show={props.show}>
+      <SubMenuItem href="#" show={props.show} color={props.color}>
         Contact
       </SubMenuItem>
-      <SubMenuItem href="#" show={props.show}>
+      <SubMenuItem href="#" show={props.show} color={props.color}>
         Newsletter
       </SubMenuItem>
-      <SubMenuItem href="#" show={props.show}>
+      <SubMenuItem href="#" show={props.show} color={props.color}>
         LinkedIn
       </SubMenuItem>
     </Container>

@@ -55,35 +55,6 @@ const MenuItem = styled.div`
   font-family: "Ubuntu", sans-serif;
 `;
 
-// /**
-//  * Menu category
-//  */
-// const MenuTitle = styled.button`
-//   margin: 0;
-//   padding: 8px 28px 8px 10px;
-//   color: white;
-//   font-family: "Ubuntu", sans-serif;
-//   font-weight: 500;
-//   font-size: 16px;
-//   border: none;
-//   background-color: transparent;
-
-//   &::after {
-//     position: absolute;
-//     display: inline-block;
-//     margin-left: 8px;
-//     content: url(${arrowUrl});
-//   }
-
-//   &[aria-expanded="true"]::after {
-//     top: 12px;
-//     transform: rotate(180deg);
-//   }
-
-//   &:hover {
-//     text-decoration: underline;
-//   }
-// `;
 
 /**
  * Header for the application when viewed on desktop.

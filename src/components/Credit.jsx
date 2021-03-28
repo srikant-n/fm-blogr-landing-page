@@ -5,10 +5,11 @@ const Attribution = styled.div`
   font-size: 11px;
   text-align: center;
   margin: 10px auto;
+  color: #aaa;
 `;
 
 const Link = styled.a`
-  color: hsl(228, 45%, 44%);
+  color: white;
 `;
 
 class Credit extends React.Component {
