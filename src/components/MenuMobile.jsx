@@ -154,8 +154,8 @@ class MenuMobile extends React.Component {
             </SubMenuMobile>
           </MenuItem>
           <Line />
-          <LoginButton />
-          <SignupButton />
+          <LoginButton aria-label="login" />
+          <SignupButton aria-label="signup" />
         </Background>
       </Container>
     );

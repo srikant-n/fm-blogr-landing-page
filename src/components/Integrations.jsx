@@ -14,7 +14,7 @@ const Container = styled.div`
 /**
  * Laptop illustration on Mobile
  */
-const IllustrationMobile = styled.img.attrs(() => ({ src: laptopMobile }))`
+const IllustrationMobile = styled.img.attrs(() => ({ src: laptopMobile, alt="" }))`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -28,7 +28,7 @@ const IllustrationMobile = styled.img.attrs(() => ({ src: laptopMobile }))`
 /**
  * Laptop illustration on Desktop
  */
-const IllustrationDesktop = styled.img.attrs(() => ({ src: laptopDesktop }))`
+const IllustrationDesktop = styled.img.attrs(() => ({ src: laptopDesktop, alt="" }))`
   position: absolute;
   right: 50%;
   display: none;

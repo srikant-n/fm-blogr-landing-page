@@ -78,7 +78,7 @@ const PaddingFooter = styled(Padding)`
 /**
  * Logo
  */
-const Logo = styled.img.attrs(() => ({ src: logo }))`
+const Logo = styled.img.attrs(() => ({ src: logo, alt: "Logo" }))`
   position: relative;
   width: 100px;
   height: auto;

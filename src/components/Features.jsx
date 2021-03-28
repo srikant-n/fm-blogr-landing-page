@@ -41,7 +41,7 @@ const Content = styled.div`
 /**
  * Illustration on mobile
  */
-const EditorImageMobile = styled.img.attrs(() => ({ src: editorMobile }))`
+const EditorImageMobile = styled.img.attrs(() => ({ src: editorMobile, alt: "Editor" }))`
   width: 405px;
   margin: 30px 0 30px 0;
   height: auto;
@@ -57,7 +57,7 @@ const EditorImageMobile = styled.img.attrs(() => ({ src: editorMobile }))`
 /**
  * Illustration on desktop
  */
-const EditorImageDesktop = styled.img.attrs(() => ({ src: editorDesktop }))`
+const EditorImageDesktop = styled.img.attrs(() => ({ src: editorDesktop, alt: "Editor"  }))`
   position: absolute;
   width: auto;
   height: auto;

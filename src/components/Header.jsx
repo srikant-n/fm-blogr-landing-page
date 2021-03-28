@@ -115,8 +115,8 @@ class Header extends React.Component {
             </SubMenuBackground>
           </MenuItem>
           <Buttons>
-            <Button value="Login" />
-            <ButtonFilled value="Sign Up" />
+            <Button aria-label="Login" value="Login" />
+            <ButtonFilled aria-label="Signup" value="Sign Up" />
           </Buttons>
         </StyledHeader>
       </Container>

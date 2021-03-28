@@ -100,8 +100,8 @@ class Intro extends React.Component {
           <Heading>A modern publishing platform</Heading>
           <Paragraph>Grow your audience and build your online brand</Paragraph>
           <Buttons>
-            <ButtonFilled value="Start for Free" />
-            <LearnMoreButton />
+            <ButtonFilled aria-label="Start for Free" value="Start for Free" />
+            <LearnMoreButton aria-label="Learn More" />
           </Buttons>
         </Content>
       </Background>

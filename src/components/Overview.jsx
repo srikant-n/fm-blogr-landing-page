@@ -35,7 +35,7 @@ const Backdrop = styled(Padding)`
 /**
  * Pattern on the background
  */
-const BgPattern = styled.img.attrs(() => ({ src: bgPattern }))`
+const BgPattern = styled.img.attrs(() => ({ src: bgPattern, alt="" }))`
   position: absolute;
   left: 50%;
   top: -36%;
@@ -53,7 +53,7 @@ const BgPattern = styled.img.attrs(() => ({ src: bgPattern }))`
 /**
  * Illustration
  */
-const Phones = styled.img.attrs(() => ({ src: phones }))`
+const Phones = styled.img.attrs(() => ({ src: phones, alt="" }))`
   position: absolute;
   width: auto;
   margin: 20px 0;
