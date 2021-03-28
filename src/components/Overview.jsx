@@ -5,9 +5,9 @@ import phones from "../../images/illustration-phones.svg";
 import bgPattern from "../../images/bg-pattern-circles.svg";
 
 const Container = styled.div`
-position:relative;
+  position: relative;
   @media (min-width: 900px) {
-    height: 590px;
+    height: 500px;
   }
 `;
 
@@ -22,7 +22,7 @@ const Backdrop = styled(Padding)`
   border-bottom-left-radius: 100px;
   border-top-right-radius: 100px;
   margin-top: 205px;
-  overflow: clip;
+  overflow: hidden;
 
   @media (min-width: 900px) {
     background: linear-gradient(90deg, hsl(237, 17%, 21%) 0%, hsl(237, 23%, 32%) 100%);
@@ -65,11 +65,11 @@ const Phones = styled.img.attrs(() => ({ src: phones }))`
 
   @media (min-width: 900px) {
     height: 580px;
-    top:-80px;
+    top: -80px;
     margin: 0;
     right: 51%;
     left: unset;
-    transform: unset;    
+    transform: unset;
   }
 `;
 

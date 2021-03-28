@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import arrowUrl from "../../images/icon-arrow-dark.svg";
-import hamburgerUrl from "../../images/icon-hamburger.svg";
 import { Button } from "./commonComponents";
 import { MenuTitle, ProductSubMenu, CompanySubMenu, ConnectSubMenu, SubMenuBackground } from "./SubMenus.jsx";
 
